@@ -5,13 +5,13 @@ class Department:
         self.rh = rh
         self.oh = oh
         self.u = u 
-        self.th = self.getth()
-        self.mhpu = self.getmphu()
+        self.th = self.setth()
+        self.mhpu = self.setmhpu()
 
-    def getth(self):
+    def setth(self):
         return self.rh + (self.oh * 1.5)
 
-    def getmhpu(self):
+    def setmhpu(self):
         return self.th / self.u
 
 departments = ['2031', '2029', '2030', '2080', '2120', '2140', '2105', '2090', '2114', '2118', '2113', '2085', '2023']
@@ -19,7 +19,7 @@ elements = ['rh', 'oh', 'u']
 departmentstats = []
 
 for department in departments:
-    department = Department()
+    department = Department(rh=1, oh=1, u=1)
 
 for department in departments:
     for elem in elements:
